@@ -14,7 +14,8 @@ export default function Timespan() {
     return (
         <div className="w-sm h-full flex flex-col justify-center items-center gap-5">
             <p className="text-2xl font-bold">Select your timespan</p>
-            <select className="w-1/2 h-12 p-3" value={formData.timespan} onChange={(e) => updateFormData({ timespan: e.target.value })}>
+            <select className="w-1/2 h-12 p-3 text-black" value={formData.timespan} onChange={(e) => updateFormData({ timespan: e.target.value })}>
+                <option value="" disabled>Select a timespan</option>
                 <option value="7day">Last Week</option>
                 <option value="1month">Last Month</option>
                 <option value="3month">Last 3 Months</option>
